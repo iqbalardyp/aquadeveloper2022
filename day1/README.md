@@ -45,21 +45,119 @@ The current shipping process is performed manually i.e. item’s data collection
 ### System Architecture
 
 #### System Context
-![System Context Diagram](./media/system_context_diagram)
+![System Context Diagram](./media/system_context_diagram.png)
+
+#### Container Diagram
+![Container Diagram](./media/container_diagram.png)
 
 #### Component Diagram
-![Component Diagram](./media/component_diagram)
+![Component Diagram](./media/component_shipment_management_diagram.png)
 
-### Flowchart
-#### Data Collection
-#### Area Sorting
-#### Vehicle Management
-#### Status Controller
+### Swimlane Diagram
+![Swimlane Diagram](./media/swimlane_diagram.png)
 ### API Contract
+**General**
+- Success Response Format
+
+```
+{
+    code: integer,
+    msg: string,
+    data: interface{}
+}
+
+# Example
+{
+    code: 200,
+    msg: "successfully get user",
+    data: {
+        id: 1,
+        ...
+    },
+    ...
+}
+```
+
+- Error Response Format
+```
+{
+    code: integer,
+    msg: string,
+    data: interface{}
+}
+
+# Example
+{
+    code: 404,
+    msg: "invalid req body",
+    data: nil
+}
+```
+**Specific**
+- Get List Requested
+```
+Method: "GET",
+URL: "/api/v1/shipments",
+Params: {},
+Response Success on Data Format: 
+{
+    code: 200,
+    msg: "successfully get user",
+    data: {
+        # all shipment list of joined tables
+        ...
+    },
+    ...
+}
+
+```
+- Get List ID
+```
+Method: "GET",
+URL: "/api/v1/shipments/:id",
+Params: {
+    id : # specified id,
+},
+
+Response Success on Data Format: 
+{
+    code: 200,
+    msg: "successfully get user",
+    data: {
+        # shipment list of joined tables at specified id
+        ...
+    },
+    ...
+}
+```
+- Submit Request
+```
+Method: "POST",
+URL: "/api/v1/shipments/:id",
+Body: {
+    # all field in shipment request form
+}
+```
+- Update Request
+```
+Method: "PUT",
+URL: "/api/v1/shipments/:id",
+Body: {
+    # all field in shipment request form
+}
+```
+- Delete Request
+```
+Method: "DELETE",
+URL: "/api/v1/shipments/:id",
+Body: {}
+```
 ## Dependencies
 ## Milestones/Deployment Strategy
 ## Data Result
 ### ERD
+![ERD](./media/er_diagram.png)
 ## Drawbacks/Risks/Possible Failures
 ## Alternatives
 ## Unresolved/Future Possibilities
+- Add efficiency analysis service to calculate the most efficient routes and vehicle management
