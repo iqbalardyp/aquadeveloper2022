@@ -40,16 +40,11 @@ The current commercial process are performed manually i.e. product collection an
 
 ## Detailed Design
 
-### System Architecture
-
-#### System Context
-
-#### Container Diagram
-
-#### Component Diagram
-
+### Flowchart
+![Flowchart](./media/flowchart.png)
 ### Swimlane Diagram
-
+![swimlane_product_srv](./media/swimlane_product_srv.png)
+![swimlane_cart_and_payment_srv](./media/swimlane_cart_and_payment_srv.png)
 ### API Contract
 **General**
 - Success Response Format
@@ -94,7 +89,7 @@ The current commercial process are performed manually i.e. product collection an
 ## Milestones/Deployment Strategy
 ## Data Result
 ### ERD
-
+![ERD](./media/erd.png)
 ## Drawbacks/Risks/Possible Failures
 ## Alternatives
 ## Unresolved/Future Possibilities
