@@ -1,3 +1,11 @@
+# How to Run
+ 1. Install Go 1.18 or higher
+ 2. Install Docker Desktop or Docker with docker-compose
+ 3. Install Postman or other RestAPI Client
+ 4. Run in your terminal <br/>
+ `docker pull iqbalardyp/efisheryecommerce`
+ 5. You should be able to test the API<br/><br/>
+
 # [RFC] - eCommerce App
 ## Related Document
 
@@ -33,7 +41,7 @@ Version:
 <br/>
 
 ## Summary
-
+The current commercial process are performed manually i.e. product collection and product listing to payment. Customer are also have a degree of difficulty to pick the desired product from our service. In order to improve efficiency and easy access of our service, we need to automate our commercial process in the form of eCommerce App. 
 
 ## Problem and Motivation
 The current commercial process are performed manually i.e. product collection and product listing to payment. Customer are also have a degree of difficulty to pick the desired product from our service. In order to improve efficiency and easy access of our service, we need to automate our commercial process in the form of eCommerce App. 
@@ -41,10 +49,10 @@ The current commercial process are performed manually i.e. product collection an
 ## Detailed Design
 
 ### Flowchart
-![Flowchart](./media/flowchart.png)
+![Flowchart](./media/rfc/flowchart.png)
 ### Swimlane Diagram
-![swimlane_product_srv](./media/swimlane_product_srv.png)
-![swimlane_cart_and_payment_srv](./media/swimlane_cart_and_payment_srv.png)
+![swimlane_product_srv](./media/rfc/swimlane_product_srv.png)
+![swimlane_cart_and_payment_srv](./media/rfc/swimlane_cart_and_payment_srv.png)
 ### API Contract
 **General**
 - Success Response Format
@@ -83,13 +91,17 @@ The current commercial process are performed manually i.e. product collection an
     data: nil
 }
 ```
-**Specific**
-
+**Specific**<br/>
+[API Documentation](https://documenter.getpostman.com/view/24179858/2s8YeoNt3A)
 ## Dependencies
 ## Milestones/Deployment Strategy
 ## Data Result
 ### ERD
-![ERD](./media/erd.png)
+![ERD](./media/rfc/erd.png)
 ## Drawbacks/Risks/Possible Failures
 ## Alternatives
 ## Unresolved/Future Possibilities
+- update payment srv to fulfill erd design
+- Add user and user authorization
+- Add unit test
+- Deploy to opensource hosting service
