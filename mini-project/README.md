@@ -2,9 +2,12 @@
  1. Install Go 1.18 or higher
  2. Install Docker Desktop or Docker with docker-compose
  3. Install Postman or other RestAPI Client
- 4. Run in your terminal <br/>
+ 4. Pull docker image <br/>
  `docker pull iqbalardyp/efisheryecommerce`
- 5. You should be able to test the API<br/><br/>
+ 5. Clone yaml file from github <br/>
+ `git clone http://github.iqbalardyp/aquadeveloper2022`
+ 6. Build docker compose
+ 7. You could test the API<br/><br/>
 
 # [RFC] - eCommerce App
 ## Related Document
@@ -97,11 +100,14 @@ The current commercial process are performed manually i.e. product collection an
 ## Milestones/Deployment Strategy
 ## Data Result
 ### ERD
-![ERD](./media/rfc/erd.png)
+**ERD - V1 - Proposal**
+![ERD1](./media/rfc/erd.png)
+**ERD - V1 - Implementation**
+![ERD2](./media/rfc/erd_v1.png)
 ## Drawbacks/Risks/Possible Failures
 ## Alternatives
 ## Unresolved/Future Possibilities
-- update payment srv to fulfill erd design
+- update payment srv to fulfill erd initial design
 - Add user and user authorization
 - Add unit test
 - Deploy to opensource hosting service
